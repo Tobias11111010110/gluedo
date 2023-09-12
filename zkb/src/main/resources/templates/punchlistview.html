@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Meine Taverne</title>
+    <link rel="stylesheet" href="mvp.css">
+    <!-- link rel="stylesheet" href="css/tavern.css"-->
+</head>
+<body>
+<main>
+    <section>
+        <h1>Die Liste der Reservationen</h1>
+    </section>
+    <section>
+        <table>
+            <tbody>
+            <tr th:each="person : ${people}">
+                <td th:text="${person.age}"></td>
+                <td th:text="${person.name}"></td>
+
+            </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <section>
+        <table>
+            <tbody>
+            <tr th:each="weapon : ${weapons}">
+                <td th:text="${weapon.name}"></td>
+                <td th:text="${weapon.material}"></td>
+                <td th:text="${weapon.Munitionstyp}"></td>
+                <td th:text="${weapon.Reichweite}"></td>
+
+            </tr>
+            </tbody>
+
+        </table>
+    </section>
+</main>
+</body>
+</html>
